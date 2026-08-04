@@ -1,0 +1,4 @@
+### Entery 1 
+**Backgroud:** On day I saw a guy on YouTube proving how vulnerable an WPA2 network rely is. Then I started looking more in to cybersecurity. One day one guy used an esp32 to crack an Wi-Fi password, from then on I was hooked. I started searching the best tools for cybersecurity for esp's. And on day I found this on: *GhostESP*. The best part is that it was compatible whit my Cheep Yellow Display ESP32 , but there was a problem. The processor kept crashing because majority of the processing power went in too the 2.8 inch display screen (and to be honest it realy didn't look cool). So I set my self a goal, I wnated to use all the GhostESP Tools in a Cool looking device.
+**Progress:** I made the plan for the device and an BOM. Whit the design of the device I wanted to go what an DIY look meaning I'll just strap the pieces on some prototype boards
+**Problems:** Nothing so far 
