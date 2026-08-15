@@ -1,10 +1,10 @@
-# ESPGraveYard 🪦
+# ESPGraveYard 
 
 **ESPGraveYard** is a portable, dual-node cybersecurity and wireless research device running **GhostESP v2.1**. It offloads screen and touch UI processing to a primary display controller while delegating heavy radio, USB injection, and hardware tasks to an **ESP32-S3** expansion node via **GhostLink**.
 
 ---
 
-## 🔑 Key Features
+##  Key Features
 
 -  **BadUSB & BadBT (Wireless HID):** Hardware-level DuckyScript keyboard injection via native USB OTG on the ESP32-S3 and Bluetooth Low Energy Swift Pair.
 -  **Sub-GHz RF (433 MHz):** Frequency scanning, packet capture, and signal transmission using the **CC1101** module.
@@ -16,4 +16,4 @@
 
 ---
 
-> ℹ️ *All firmware rights and core software credits belong to the original **GhostESP** project.*
+>  *All firmware rights and core software credits belong to the original **GhostESP** project.*
