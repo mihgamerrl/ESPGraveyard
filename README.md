@@ -20,7 +20,7 @@ It features a dual-microcontroller architecture: an **ESP32-S3** handles all hig
 
 ## 📐 Hardware Architecture & Wiring
 
-![Wire Diagram.png](Wire Diagram.png)
+![Wire.Diagram.png](Wire.Diagram.png)
 
 ### GPIO Pinout Mapping
 
