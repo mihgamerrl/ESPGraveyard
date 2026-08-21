@@ -1,4 +1,4 @@
-# ESPGraveYard 🪦
+# ESPGraveYard 
 
 **ESPGraveYard** is a modular, handheld hardware platform built for multi-protocol wireless security auditing, network testing, and GPS wardriving powered by **GhostESP** firmware.
 
@@ -6,7 +6,7 @@ It features a dual-microcontroller architecture: an **ESP32-S3** handles all hig
 
 ---
 
-## ⚡ Key Features
+##  Key Features
 
 * **Sub-GHz RF Auditing (CC1101):** Scan, capture, decode, and replay 433MHz signals for IoT and remote control analysis.
 * **2.4GHz RF Analysis (NRF24L01+ PA/LNA):** Protocol sniffing and packet injection across the 2.4GHz spectrum.
@@ -20,9 +20,7 @@ It features a dual-microcontroller architecture: an **ESP32-S3** handles all hig
 
 ## 📐 Hardware Architecture & Wiring
 
-All SPI modules (CC1101, NRF24, W5500, MicroSD) share a single high-speed SPI bus with dedicated Chip Select (CS) lines to prevent bus contention.
-
-![Wiring Diagram](Wire Diagram.png)
+![Wire Diagram.png](Wire Diagram.png)
 
 ### GPIO Pinout Mapping
 
@@ -34,13 +32,11 @@ All SPI modules (CC1101, NRF24, W5500, MicroSD) share a single high-speed SPI bu
 | **MicroSD Card Module** | SPI / CS | GPIO 4 | Log & Asset Storage |
 | **PN532 NFC Module** | I2C | GPIO 1 (SDA), GPIO 2 (SCL) | High-Frequency RFID |
 | **ATGM336H GPS** | Hardware UART | RX / TX (Dedicated) | NMEA Telemetry |
-| **CYD (GhostLink)** | Serial UART | RX / TX (Dedicated) | Remote Touch Interface |
+| **GhostLink** | Serial UART | RX / TX (Dedicated) | Remote Touch Interface |
 
 ---
 
 ## 🛒 Bill of Materials (BOM)
-
-For full purchase links and raw spreadsheet data, see [`BOM.csv`](BOM.csv).
 
 | Part Name | Qty | Price (RON) | Price (EUR) |
 | :--- | :---: | :---: | :---: |
@@ -54,11 +50,3 @@ For full purchase links and raw spreadsheet data, see [`BOM.csv`](BOM.csv).
 | Prototype Perfboard 4x6 cm (3 pcs) | 3 | 13.44 | 2.70 |
 | 4-Pin LED Cable & Cynel Solder Wire | 2 | 63.92 | 12.87 |
 | **Total** | | **415.53 RON** | **€83.61** |
-
----
-
-## 🚀 Setup & Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/mihgamerrl/ESPGraveyard.git](https://github.com/mihgamerrl/ESPGraveyard.git)
