@@ -5,10 +5,8 @@
 **Author:** @mihgamerrl  
 
 ### Background & Motivation
-One day I saw a video on YouTube proving how vulnerable a WPA2 network really is. That rabbit hole got me interested in cybersecurity. Eventually, I saw someone using an ESP32 to audit Wi-Fi security, and I was completely hooked. 
-
-I started searching for the best cybersecurity tools for ESP modules and found **GhostESP**. The best part was that it was compatible with my Cheap Yellow Display (CYD) ESP32! However, I ran into a major hardware limitation: the processor kept crashing because the majority of its processing power went toward driving the 2.8-inch display (and to be honest, it didn't look as cool as I wanted).
-
+ One day I saw a guy on YouTube proving how vulnerable an WPA2 network rely is. Then I started looking more in to cybersecurity. One day one guy used an esp32 to crack an Wi-Fi password, from then on I was hooked. I started searching the best tools for cybersecurity for esp's. And on day I found this on: GhostESP. The best part is that it was compatible whit my Cheep Yellow Display ESP32 , but there was a problem. The processor kept crashing because majority of the processing power went in too the 2.8 inch display screen (and to be honest it realy didn't look cool). So I set my self a goal, I wnated to use all the GhostESP Tools in a Cool looking device.
+ 
 ### The Goal
 I set a goal to build a cool-looking, dedicated hardware device that can harness all the GhostESP tools without crashing.
 
@@ -23,16 +21,8 @@ I set a goal to build a cool-looking, dedicated hardware device that can harness
 **Author:** @mihgamerrl  
 
 ### Research & Sourcing
-Before ordering anything, I checked the GhostESP documentation to see what hardware modules its firmware supports natively. Once I had a complete list, I started searching my local marketplace (EMag) for parts.
+First, before searching anything, I opened the GhostESP site and looked at what their software can handle. After I marked down everything I start looking on my local marketplace, EMag. I added to the cart NFC, Radio, Sub-GHz, Ethernet and IR modules. I also added battery , wires, prototypes boards and the ESP32-S3. But why the S3 you might ask, well the s3 not only that it has a LOT of pins, it also has 2 usb ports. The URAT port ment for board communication AND The OTG (On-The-Go) port that can act like an usb device, meaning, it can act like an mouse ,keyboard or even an storage device. Also you might think, how will I use my CYC Display to control the ESP32-S3, for that I will use the GhostLink. GhostLink is a built in way to control 2 or more ESPGhost devices wired.
 
-I added the following to my cart:
-* **Modules:** NFC, Radio (NRF24L01), Sub-GHz (CC1000), Ethernet (W5500), and IR modules.
-* **Power & Prototyping:** Battery, wiring, breadboards/prototype boards.
-* **Main Controller:** ESP32-S3.
-
-### Why the ESP32-S3?
-1. **High Pin Count:** It has enough GPIOs to route multiple communication buses (SPI, I2C, UART).
-2. **Dual USB Ports:** It features a native UART port for debugging and a **USB OTG (On-The-Go)** port that can emulate HID devices (mouse, keyboard, storage).
 
 ### Display & Inter-Device Communication
 To control the ESP32-S3 using my CYD (Cheap Yellow Display) screen without overloading the main processor, I planned to use **GhostLink**—a built-in protocol designed to link and control multiple ESPGhost devices over a wired interface.
@@ -47,11 +37,7 @@ To control the ESP32-S3 using my CYD (Cheap Yellow Display) screen without overl
 **Author:** @mihgamerrl  
 
 ### The Issue
-While mapping out power connections for each module and microcontroller, I hit a major hardware bottleneck:
-* To power the **ESP32-S3** from the Cheap Yellow Display (CYD), I need `+5V` and `GND`.
-* To power the **CYD** from the main power source, it also requires a `+5V` rail and `GND`.
-
-While I have plenty of shared ground (`GND`) pins, I lacked an easy way to distribute regulated `+5V` power across both devices without causing power dips or brownouts.
+While I was looking at what pins I need to connect for each modul and microcontroller I stumbled upon an BIG problem. For me to power the ESP32-S3 from my CYC I need the +5v and the GND, But to power the CYC I also need the 5v and GND. I have multiple GND ports but not 5v. I tried for hours to find an alternative but I came to a conclusion to just use a portable phone battery.
 
 ### Resolution
 After spending hours trying to find an elegant power-sharing workaround on the board, I decided to simplify the power architecture by using a dedicated external portable battery bank to supply clean power across the setup.
@@ -66,12 +52,7 @@ After spending hours trying to find an elegant power-sharing workaround on the b
 **Author:** @mihgamerrl  
 
 ### Drawing the Wiring Schematic
-The last step before submitting was making a clear wiring diagram. I thought it would be a quick drawing task, so I opened Draw.io. Once inside, I was flooded with shapes and components and realized I needed to know the exact pinout for every module.
-
-### Researching Pinouts
-I asked Gemini for help mapping out the connections, but it kept giving me incomplete/confusing pin information. I had to manually scrape datasheets and Reddit threads to figure out how many pins each module actually needed and what every pin did.
-
- **Lesson Learned:** Just because a module has 8 physical pins doesn't mean you need to wire all 8! For example, the NRF24L01 2.4GHz module has 8 pins, but only 7 need to be wired up—the `RESET` pin isn't connected because resetting is handled via software in GhostESP.
+What I thought will be a quick draw turn I to a mini 9 to 5. Last thing on the list before submitting was to make a wire diagram, I looked easy so I asked Gemini for an a site to draw, he recomanded Draw.io. I opened the site, there I was prompted whit a LOT of shapes .i mad each component and the it hit me. I have to reasearch how many pins I need for each component. And before you know it I was 2 hours deep in an convo whit Gemini, witch for the love of god, it couldn't give me any info , so I had to manually scrape resit for how many pins I have to use and what each one do. And before you say:"If it has 8 pins that means you have to connect all of them." The 2.4 Ghz modul has 8 pins but I only need 7 of them, the one I don't need is reset pin, but the is done software wise by GhostESP
 
  <img width="702" height="662" alt="image" src="https://github.com/user-attachments/assets/902f1eb3-a118-427f-b047-7f76559b88f7" />
 
