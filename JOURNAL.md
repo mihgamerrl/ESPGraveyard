@@ -12,6 +12,7 @@ I started searching for the best cybersecurity tools for ESP modules and found *
 ### The Goal
 I set a goal to build a cool-looking, dedicated hardware device that can harness all the GhostESP tools without crashing.
 
+<img width="3024" height="4032" alt="image" src="https://github.com/user-attachments/assets/1f0af159-cbdf-4a1b-aeb6-0b1e01698785" />
 
 
 
