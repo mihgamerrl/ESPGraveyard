@@ -24,9 +24,6 @@ I set a goal to build a cool-looking, dedicated hardware device that can harness
 First, before searching anything, I opened the GhostESP site and looked at what their software can handle. After I marked down everything I start looking on my local marketplace, EMag. I added to the cart NFC, Radio, Sub-GHz, Ethernet and IR modules. I also added battery , wires, prototypes boards and the ESP32-S3. But why the S3 you might ask, well the s3 not only that it has a LOT of pins, it also has 2 usb ports. The URAT port ment for board communication AND The OTG (On-The-Go) port that can act like an usb device, meaning, it can act like an mouse ,keyboard or even an storage device. Also you might think, how will I use my CYC Display to control the ESP32-S3, for that I will use the GhostLink. GhostLink is a built in way to control 2 or more ESPGhost devices wired.
 
 
-### Display & Inter-Device Communication
-To control the ESP32-S3 using my CYD (Cheap Yellow Display) screen without overloading the main processor, I planned to use **GhostLink**—a built-in protocol designed to link and control multiple ESPGhost devices over a wired interface.
-
 <img width="828" height="1407" alt="image" src="https://github.com/user-attachments/assets/b0e039e8-1a21-4953-a996-6d9d0caccedc" />
 
 
@@ -38,9 +35,6 @@ To control the ESP32-S3 using my CYD (Cheap Yellow Display) screen without overl
 
 ### The Issue
 While I was looking at what pins I need to connect for each modul and microcontroller I stumbled upon an BIG problem. For me to power the ESP32-S3 from my CYC I need the +5v and the GND, But to power the CYC I also need the 5v and GND. I have multiple GND ports but not 5v. I tried for hours to find an alternative but I came to a conclusion to just use a portable phone battery.
-
-### Resolution
-After spending hours trying to find an elegant power-sharing workaround on the board, I decided to simplify the power architecture by using a dedicated external portable battery bank to supply clean power across the setup.
 
 <img width="403" height="873" alt="image" src="https://github.com/user-attachments/assets/0008371e-b408-4685-9179-b78cc9a6a7e9" />
 
