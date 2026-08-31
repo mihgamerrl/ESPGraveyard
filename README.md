@@ -50,3 +50,6 @@ It features a dual-microcontroller architecture: an **ESP32-S3** handles all hig
 | Prototype Perfboard 4x6 cm (3 pcs) | 3 | 13.44 | 2.70 |
 | 4-Pin LED Cable & Cynel Solder Wire | 2 | 63.92 | 12.87 |
 | **Total** | | **415.53 RON** | **€83.61** |
+
+<img width="386" height="719" alt="image" src="https://github.com/user-attachments/assets/5e0efc04-ff19-4273-aeb6-00f632551337" />
+
