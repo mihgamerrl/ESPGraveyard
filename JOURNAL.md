@@ -74,9 +74,3 @@ I asked Gemini for help mapping out the connections, but it kept giving me incom
 
  <img width="702" height="662" alt="image" src="https://github.com/user-attachments/assets/902f1eb3-a118-427f-b047-7f76559b88f7" />
 
-
----
-
-## 🚢 Submissions & Milestones
-* **Aug 10, 2026:** Started `ESPGraveYard` repo.
-* **Aug 15, 2026 (6:10 PM):** Submitted Ship 1 for review.
