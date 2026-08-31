@@ -1,7 +1,7 @@
 #  ESPGraveYard — Development Journal
 
 ##  August 10, 2026 — Background & Project Inception
-**Time Spent:** ~1h  
+**Time Spent:** 2h  
 **Author:** @mihgamerrl  
 
 ### Background & Motivation
